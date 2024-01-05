@@ -1,0 +1,45 @@
+{
+  "name": "@nanostores/vue",
+  "version": "0.10.0",
+  "description": "Vue integration for Nano Stores, a tiny state manager with many atomic tree-shakable stores",
+  "keywords": [
+    "store",
+    "state",
+    "state manager",
+    "vue"
+  ],
+  "author": "Eduard Aksamitov <e@euaaaio.ru>",
+  "license": "MIT",
+  "repository": "nanostores/vue",
+  "sideEffects": false,
+  "type": "module",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": "./index.js",
+    "./devtools": "./devtools/index.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "peerDependencies": {
+    "@nanostores/logger": ">=0.2.3",
+    "@vue/devtools-api": ">=6.5.0",
+    "nanostores": ">=0.9.2",
+    "vue": ">=3.3.1"
+  },
+  "peerDependenciesMeta": {
+    "@nanostores/logger": {
+      "optional": true
+    },
+    "@vue/devtools-api": {
+      "optional": true
+    }
+  },
+  "nano-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
